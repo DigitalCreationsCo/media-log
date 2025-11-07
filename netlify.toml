@@ -1,9 +1,9 @@
 [build]
 publish = "site"
 command = """
-pip3 install virtualenv &&
-python3 -m virtualenv .venv &&
+pip3 install uv &&
+uv venv &&
 source .venv/bin/activate &&
-pip install -r requirements.txt &&
+uv pip install . &&
 mkdocs build
 """

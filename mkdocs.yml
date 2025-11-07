@@ -3,35 +3,58 @@ nav:
   - index.md
 theme:
   name: "material"
-  favicon: "static/favicon/favicon.ico"
-  logo:
-    icon: "home"
+  # favicon: "static/favicon/favicon.ico"
+  # logo:
+  #   icon: "home"
   palette:
     primary: "blue grey"
     accent: "blue"
   font:
-    text: "IBM Plex Serif"
+    text: "IBM Plex Sans"
     code: "IBM Plex Mono"
 markdown_extensions:
+  # Automatically generates a table of contents for each page based on its headings.
+  # The `permalink: "#"` option adds a permalink icon next to each heading.
   - toc:
       permalink: "#"
+  # Converts ASCII dashes, quotes, and ellipses to their typographically correct HTML entities.
   - smarty
+  # Allows for special blocks (like notes, warnings, tips) with distinct styling and icons.
   - admonition
+  # Enables the use of footnotes in Markdown documents.
   - footnotes
+  # Provides syntax highlighting for code blocks using Pygments.
   - codehilite
+  # Enables the use of attributes for Markdown elements, necessary for `markdown` attribute on HTML blocks.
+  - attr_list
+  # Renders mathematical equations using MathJax or KaTeX.
   - pymdownx.arithmatex
+  # Improves emphasis (bold/italic) parsing, allowing for more natural use of underscores and asterisks within words.
   - pymdownx.betterem:
       smart_enable: all
+  # Adds support for <ins> (inserted text) HTML tags using `^^text^^` syntax.
   - pymdownx.caret
+  # Implements Critic Markup syntax for tracking changes (additions, deletions, substitutions, comments, highlights) in documents.
   - pymdownx.critic
+  # Allows creation of <details> and <summary> HTML elements for collapsible content.
   - pymdownx.details
+  # Enables the use of emoji shortcodes (e.g., `:smile:`) which are converted to SVG or image representations.
+  # `emoji_generator: !!python/name:pymdownx.emoji.to_svg` specifies using SVG for emoji rendering.
   - pymdownx.emoji:
       emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  # Provides syntax highlighting for inline code blocks.
   - pymdownx.inlinehilite
+  # Automatically converts URLs and email addresses into clickable links.
   - pymdownx.magiclink
+  # Adds support for <mark> (highlighted text) HTML tags using `==text==` syntax.
   - pymdownx.mark
+  # Converts common ASCII symbols to their typographically correct Unicode equivalents (e.g., `(c)` to `©`).
   - pymdownx.smartsymbols
+  # Enhances standard Markdown fenced code blocks, allowing for nested fences and custom processors.
   - pymdownx.superfences
+  # Enables GitHub-style task lists (checkboxes) in Markdown.
+  # `custom_checkbox: true` allows for custom styling of these checkboxes.
   - pymdownx.tasklist:
       custom_checkbox: true
+  # Adds support for `<sub>` (subscript) and `<sup>` (superscript) HTML tags using `~text~` and `^text^` syntax, respectively, and also strikethrough using `~~text~~`.
   - pymdownx.tilde
