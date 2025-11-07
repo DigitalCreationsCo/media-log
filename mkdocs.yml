@@ -1,5 +1,5 @@
 site_name: MediaLog
-docs_dir: .
+docs_dir: src
 nav:
   - index.md
 theme:
