@@ -1,9 +1,9 @@
 [build]
-publish = "site"
-comand = """
-restore_home_cache ".cache" "pip cache" &&
-restore_cwd_cache '.venv' 'python virtualenv' &&
-pip3 install uv &&
+publish = "medialog"
+command = """
+pip install uv &&
+uv venv &&
+source .venv/bin/activate &&
 uv pip install -r requirements.txt &&
-mkdocs build -d site
+mkdocs build
 """
